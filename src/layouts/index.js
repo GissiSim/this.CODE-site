@@ -1,18 +1,19 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import { rhythm, scale } from '../utils/typography'
-import { Title, SmallTitle, MainContent } from '../components/styled/'
+import {
+  Title,
+  SmallTitle,
+  MainContent,
+  StyledLink,
+  TitleWrap,
+} from '../components/styled/'
 import { TwitterIcon } from '../components/icons/'
 import styled from 'styled-components'
+require('../css/logoeffect.css')
 require('../css/prismtheme.css')
 
-const StyledLink = styled(Link)`
-  color: ${props => (props.fp ? 'red' : 'black')};
-  box-shadow: none;
-  text-decoration: none;
-  color: inherit;
-`
-const LogoBrackets = styled.span`
+const LogoBrackets = styled.strong`
   color: ${props => (props.fp ? 'white' : 'black')};
   font-weight: 500;
 `
@@ -29,12 +30,15 @@ class Template extends React.Component {
 
     if (location.pathname === rootPath) {
       header = (
-        <Title>
-          <StyledLink to={'/'}>
-            <LogoBrackets fp>&#123;&#32;</LogoBrackets>this.CODE
-            <LogoBrackets fp>&#32;&#125;</LogoBrackets>
-          </StyledLink>
-        </Title>
+        <TitleWrap>
+          <Title>
+            <StyledLink to={'/'}>
+              <LogoBrackets fp>&#123;&#32;</LogoBrackets>this.CODE
+              <LogoBrackets fp>&#32;&#125;</LogoBrackets>
+              <span>Let's code!</span>
+            </StyledLink>
+          </Title>
+        </TitleWrap>
       )
     } else {
       header = (
