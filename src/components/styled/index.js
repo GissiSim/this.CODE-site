@@ -12,7 +12,8 @@ export const TitleWrap = styled.div`
 
 export const Title = styled.h1`
   font-size: 10vw;
-  color: #ff8686;
+  color: red;
+
   position: relative;
   margin: 0;
 `
@@ -40,8 +41,9 @@ export const StyledLink = styled(Link)`
   transition: color 0.5s;
 
   &:hover {
-    color: red;
     &::before {
+      color: #ff8686;
+
       -webkit-transform: rotate3d(0, 0, 1, 45deg) scale3d(1, 1, 1);
       transform: rotate3d(0, 0, 1, 45deg) scale3d(1, 1, 1);
     }
@@ -67,8 +69,7 @@ export const StyledLink = styled(Link)`
     right: 9.3%;
     color: white;
     bottom: -10%;
-    opacity: 0;
-    transform: translate3d(-10px, -10px, 0);
+    opacity: 1;
     transition: transform 0.5s, opacity 0.5s;
   }
 

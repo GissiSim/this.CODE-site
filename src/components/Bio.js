@@ -10,12 +10,7 @@ import { rhythm } from '../utils/typography'
 class Bio extends React.Component {
   render() {
     return (
-      <div
-        style={{
-          display: 'flex',
-          marginBottom: rhythm(2.5),
-        }}
-      >
+      <div style={{ display: 'flex', marginBottom: rhythm(2.5) }}>
         <img
           src={profilePic}
           alt={`Gissur Simonarson`}
@@ -28,7 +23,8 @@ class Bio extends React.Component {
         />
         <p>
           <strong>Gissur Simonarson</strong> is an Icelandic developer living in
-          the Scottish borders.{' '}
+          the Scottish borders. He works as Senior Solutions Architect at{' '}
+          Brightwire.
           <a href="https://twitter.com/gissisim">
             You should follow him on Twitter
           </a>
