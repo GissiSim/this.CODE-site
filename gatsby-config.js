@@ -5,7 +5,7 @@ module.exports = {
     description: "Let's build something!",
     siteUrl: 'https://www.gissisim.com',
   },
-  pathPrefix: '',
+  pathPrefix: '/',
   plugins: [
     {
       resolve: `gatsby-transformer-remark`,
