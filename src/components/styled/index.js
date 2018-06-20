@@ -61,12 +61,12 @@ export const StyledLink = styled(Link)`
   }
 
   span {
-    font-size: 40%;
+    font-size: 20%;
     font-weight: 400;
     position: absolute;
     right: 9.3%;
     color: white;
-    bottom: -25%;
+    bottom: -10%;
     opacity: 0;
     transform: translate3d(-10px, -10px, 0);
     transition: transform 0.5s, opacity 0.5s;

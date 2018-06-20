@@ -14,7 +14,7 @@ require('../css/logoeffect.css')
 require('../css/prismtheme.css')
 
 const LogoBrackets = styled.strong`
-  color: ${props => (props.fp ? 'white' : 'black')};
+  color: ${props => (props.fp ? '#71808e' : 'black')};
   font-weight: 500;
 `
 
@@ -35,7 +35,7 @@ class Template extends React.Component {
             <StyledLink to={'/'}>
               <LogoBrackets fp>&#123;&#32;</LogoBrackets>this.CODE
               <LogoBrackets fp>&#32;&#125;</LogoBrackets>
-              <span>Let's code!</span>
+              <span>Putting code in context.</span>
             </StyledLink>
           </Title>
         </TitleWrap>
