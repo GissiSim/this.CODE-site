@@ -1,47 +1,20 @@
 import React from 'react'
 import Link from 'gatsby-link'
-
 import { rhythm, scale } from '../utils/typography'
+import { Title, SmallTitle, MainContent } from '../components/styled/'
+import { TwitterIcon } from '../components/icons/'
 import styled from 'styled-components'
-
 require('../css/prismtheme.css')
 
-const Title = styled.h1`
-  height: 100vh;
-  width: 100vw;
-  font-size: 5.5rem;
-  margin-bottom: 5.5rem;
-  margin-top: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: red;
-  background: #485563; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to bottom,
-    #29323c,
-    #485563
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to bottom,
-    #29323c,
-    #485563
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+const StyledLink = styled(Link)`
+  color: ${props => (props.fp ? 'red' : 'black')};
+  box-shadow: none;
+  text-decoration: none;
+  color: inherit;
 `
-
-const SmallTitle = styled.h3`
-  font-family: Montserrat, sans-serif;
-  margin-top: 2rem;
-  margin-bottom: -2.5rem;
-  font-size: 1.5rem;
-`
-
-const MainContent = styled.div`
-   {
-    margin: 0 auto;
-    max-width: 40rem;
-    padding: 0;
-  }
+const LogoBrackets = styled.span`
+  color: ${props => (props.fp ? 'white' : 'black')};
+  font-weight: 500;
 `
 
 class Template extends React.Component {
@@ -57,34 +30,20 @@ class Template extends React.Component {
     if (location.pathname === rootPath) {
       header = (
         <Title>
-          <Link
-            style={{
-              boxShadow: 'none',
-              textDecoration: 'none',
-              color: 'inherit',
-            }}
-            to={'/'}
-          >
-            this.CODE
-          </Link>
+          <StyledLink to={'/'}>
+            <LogoBrackets fp>&#123;&#32;</LogoBrackets>this.CODE
+            <LogoBrackets fp>&#32;&#125;</LogoBrackets>
+          </StyledLink>
         </Title>
       )
     } else {
       header = (
-        <MainContent>
-          <SmallTitle>
-            <Link
-              style={{
-                boxShadow: 'none',
-                textDecoration: 'none',
-                color: 'inherit',
-              }}
-              to={'/'}
-            >
-              this.CODE
-            </Link>
-          </SmallTitle>
-        </MainContent>
+        <SmallTitle>
+          <StyledLink to={'/'}>
+            <LogoBrackets>&#123;&#32;</LogoBrackets>this.CODE
+            <LogoBrackets>&#32;&#125;</LogoBrackets>
+          </StyledLink>
+        </SmallTitle>
       )
     }
     return (

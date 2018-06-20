@@ -3,7 +3,6 @@ title: You just got to understand this...
 date: "2018-06-19T23:46:37.121Z"
 ---
 
-#Introduction
 With the new name (this.CODE), I found it fitting to dive into the magical **this** keyword in javascript.
 
 To best demonstrate how **this** works, I think we should look at how .call(), apply() & .bind() work.
