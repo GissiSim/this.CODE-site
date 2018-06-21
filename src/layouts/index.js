@@ -14,7 +14,7 @@ require('../css/logoeffect.css')
 require('../css/prismtheme.css')
 
 const LogoBrackets = styled.strong`
-  color: ${props => (props.fp ? '#71808e' : 'black')};
+  color: ${props => (props.fp ? 'white' : 'black')};
   font-weight: 500;
 `
 
