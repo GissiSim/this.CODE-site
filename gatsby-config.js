@@ -8,6 +8,18 @@ module.exports = {
   pathPrefix: '/',
   plugins: [
     {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `this.CODE`,
+        short_name: `this.CODE`,
+        start_url: `/`,
+        background_color: `#29323c`,
+        theme_color: `#ff000`,
+        display: `minimal-ui`,
+        icon: `src/images/icon.png`,
+      },
+    },
+    {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
